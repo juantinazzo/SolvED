@@ -1,0 +1,81 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+body .header {
+  margin-top: 50px;
+  width: 100%;
+  font-family: "Work Sans", Helvetica, sans-serif;
+  font-size: 5em;
+  text-align: center;
+  background-color: rgb(246, 246, 246);
+}
+body .container {
+  width: 100%;
+  height: 100%;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+body .container section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  scroll-snap-align: center;
+  scroll-margin-top: 50px;
+  background-color: rgb(246, 246, 246);
+  color: rgb(31, 31, 31);
+}
+body .container section .CI {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  max-height: 75vh;
+}
+body .container section .CI img {
+  max-width: 40%;
+}
+body .container section .CI__img {
+  box-shadow: #999 0px 0px 6px;
+}
+body .container section .CI__text {
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+body .container section .right {
+  text-align: right;
+}
+body .navbar {
+  font-family: "Work Sans", Helvetica, sans-serif;
+  /* Change the link color to #111 (black) on hover */
+}
+body .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+body .navbar li {
+  float: left;
+}
+body .navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+body .navbar li a:hover {
+  background-color: #111;
+}/*# sourceMappingURL=main.css.map */

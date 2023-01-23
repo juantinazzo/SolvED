@@ -1,0 +1,104 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+    .header {
+      margin-top: 50px;
+      width: 100%;
+      font-family: 'Work Sans', Helvetica, sans-serif;
+      font-size: 5em;
+      text-align: center;
+      background-color: rgb(246, 246, 246);
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: calc(100vh - 50px);
+            scroll-snap-align: center;
+            scroll-margin-top: 50px;
+            background-color: rgb(246, 246, 246);
+            color: rgb(31, 31, 31);
+
+            //&:nth-of-type(1) {
+            //    background-color: rgb(246, 246, 246);
+             //     color: rgb(31, 31, 31);
+            //}
+
+
+            .CI {
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 5em;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              max-width: 1200px;
+              max-height:75vh;
+
+              img {
+                //height: 60vh;
+                //vertical-align: top;
+                max-width:40%;
+              }
+
+              &__img {
+                box-shadow: #999 0px 0px 6px;
+              }
+              
+              &__text {
+                font-size: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+              }
+            }
+
+            .right {
+              text-align: right;
+            }
+            
+            
+          
+        }
+    }
+
+    .navbar {
+      font-family: 'Work Sans', Helvetica, sans-serif;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+        background-color: #111;
+      }
+    }
+}
