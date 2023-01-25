@@ -1,11 +1,14 @@
 body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
 }
 body .header {
   margin-top: 50px;
-  width: 100%;
   font-family: "Work Sans", Helvetica, sans-serif;
   text-align: center;
   background-color: rgb(246, 246, 246);
@@ -27,7 +30,7 @@ body .container section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 50px);
   scroll-snap-align: center;
   scroll-margin-top: 50px;
@@ -56,6 +59,85 @@ body .container section .CI__text {
 }
 body .container section .right {
   text-align: right;
+}
+body .container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  scroll-snap-align: center;
+  background-color: rgb(246, 246, 246);
+  color: rgb(31, 31, 31);
+}
+body .container footer .ftr {
+  width: 100%;
+  height: 100%;
+  /* below is just for demo styling */
+}
+body .container footer .ftr ul {
+  display: inline-grid;
+  grid-auto-flow: row;
+  grid-gap: 24px;
+  justify-items: center;
+  margin: auto;
+  list-style-type: none;
+  align-items: center;
+}
+@media (min-width: 500px) {
+  body .container footer .ftr ul {
+    grid-auto-flow: column;
+  }
+}
+body .container footer .ftr a {
+  color: white;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 hsla(0deg, 0%, 100%, 0.4);
+}
+body .container footer .ftr a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0deg, 0%, 100%, 0.4);
+}
+body .container footer .ftr li:last-child {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+body .container footer .ftr li:hover ~ li p {
+  -webkit-animation: wave-animation 0.3s infinite;
+          animation: wave-animation 0.3s infinite;
+}
+body .container footer .ftr li:first-child {
+  color: white;
+  text-decoration: none;
+}
+body .container footer .ftr div {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #002a38;
+  line-height: 1.3;
+  font-family: Consolas, monaco, monospace;
+}
+@-webkit-keyframes wave-animation {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+@keyframes wave-animation {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
 }
 body .navbar {
   font-family: "Work Sans", Helvetica, sans-serif;
